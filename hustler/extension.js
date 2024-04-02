@@ -2,21 +2,18 @@
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
 
-let intervalId;
-
 /**
  * @param {vscode.ExtensionContext} context
 */
 // Inside extension.js
 function activate(context) {
-	const INTERVAL_DURATION = 60 * 60 * 1000;
-
-	intervalId = setInterval(() => {
+	const config = vscode.workspace.getConfiguration('hustler');
+	let intervalId = setInterval(() => {
 		vscode.commands.executeCommand('hustler.growthPrompt');
-	}, INTERVAL_DURATION);
+	}, config.get('intervalDuration') * 1000);
 
 	let disposable = vscode.commands.registerCommand('hustler.growthPrompt', async function () {
-
+		const config = vscode.workspace.getConfiguration('hustler');
 		const yesItem = { title: 'Yes' };
 		const notYetItem = { title: 'Not yet' };
 		const notNeededItem = { title: 'Not needed for this project' };
@@ -31,8 +28,8 @@ function activate(context) {
 			setTimeout(() => {
 				intervalId = setInterval(() => {
 					vscode.commands.executeCommand('hustler.growthPrompt');
-				}, INTERVAL_DURATION);
-			}, new Date().setHours(24, 0, 0, 0) - new Date());
+				}, config.get('intervalDuration') * 1000);
+			}, new Date().setHours(24, 0, 0, 0) - new Date()); // restart setInterval at midnight
 
 		} else if (selection === notYetItem) {
 			// do nothing
@@ -45,6 +42,17 @@ function activate(context) {
 	});
 
 	context.subscriptions.push(disposable);
+
+	vscode.workspace.onDidChangeConfiguration(e => {
+		if (e.affectsConfiguration('hustler.intervalDuration')) {
+			const config = vscode.workspace.getConfiguration('hustler');
+			console.debug(`intervalDuration changed to ${config.get('intervalDuration')} seconds`);
+			clearInterval(intervalId);
+			intervalId = setInterval(() => {
+				vscode.commands.executeCommand('hustler.growthPrompt');
+			}, config.get('intervalDuration') * 1000);
+		}
+	})
 }
 
 // This method is called when your extension is deactivated
