@@ -3,6 +3,10 @@
   "displayName": "HustlerIDE",
   "description": "Extension for side hustlers and indie hackers to remind them to talk to their users",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alokit-Innovations/HustlerIDE.git"
+  },
   "engines": {
     "vscode": "^1.87.0"
   },
