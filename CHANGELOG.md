@@ -4,6 +4,19 @@
 
 - Nothing yet
 
+## [0.0.2] - 2024-04-03
+
+### Added
+
+- Icon for the VSCode extension
+- Publisher name in package.json
+- SUPPORT.md and CONTRIBUTING.md files
+
+### Changed
+
+- CHANGELOG.md file updated with first two releases
+- Removed release notes from README.md because CHANGELOG file exists.
+
 ## [0.0.1] - 2024-04-03
 
 - Initial release of the HustlerIDE extension based on [this post on X](https://twitter.com/AvikalpGupta/status/1775056328785858633)
