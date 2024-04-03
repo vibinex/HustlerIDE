@@ -4,6 +4,16 @@
 
 - Nothing yet
 
+## [0.0.3] - 2024-04-03
+
+### Changed
+
+- Categories in also includes "Education" because this extension educates developers to also think about marketing and user research.
+
+### Added
+
+- Added `.github/workflows/publish.yml` file to automatically publish the extension to the VSCode marketplace when a pull request is merged into the `main` branch.
+
 ## [0.0.2] - 2024-04-03
 
 ### Added

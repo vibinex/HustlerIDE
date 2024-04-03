@@ -3,7 +3,7 @@
   "displayName": "HustlerIDE",
   "icon": "images/HustlerIDE128x128.png",
   "description": "Extension for side hustlers and indie hackers to remind them to talk to their users",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "Vibinex",
   "repository": {
     "type": "git",
@@ -13,6 +13,7 @@
     "vscode": "^1.87.0"
   },
   "categories": [
+    "Education",
     "Other"
   ],
   "activationEvents": [],
