@@ -46,9 +46,3 @@ This extension is licensed under the [Apache v2.0](LICENSE).
 
 1. Currently, the extension is not able to remember its state across sessions. So you might see the prompts again on the same day after pressing "Yes" if you restart VSCode
 2. Project specific configuration is not supported yet. Pressing "Not Needed" will disable the prompts for all projects.
-
-## Release Notes
-
-### 0.0.1
-
-Initial release of the HustlerIDE extension based on [this post on X](https://twitter.com/AvikalpGupta/status/1775056328785858633)
