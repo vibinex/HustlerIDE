@@ -17,7 +17,17 @@
         "command": "hustler.growthPrompt",
         "title": "Show prompt to talk to users"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Hustler",
+      "properties": {
+        "hustler.intervalDuration": {
+          "type": "number",
+          "default": 3600,
+          "description": "Interval duration in seconds between prompts"
+        }
+      }
+    }
   },
   "scripts": {
     "lint": "eslint .",
