@@ -8,7 +8,7 @@
 
 ### Changed
 
-- Categories in also includes "Education" because this extension educates developers to also think about marketing and user research.
+- Categories now includes "Education" because this extension educates developers to also think about marketing and user research.
 
 ### Added
 
