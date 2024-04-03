@@ -1,8 +1,14 @@
 {
   "name": "hustler",
   "displayName": "HustlerIDE",
+  "icon": "images/HustlerIDE128x128.png",
   "description": "Extension for side hustlers and indie hackers to remind them to talk to their users",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "publisher": "Vibinex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alokit-Innovations/HustlerIDE.git"
+  },
   "engines": {
     "vscode": "^1.87.0"
   },
